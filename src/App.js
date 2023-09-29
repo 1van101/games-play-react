@@ -10,10 +10,16 @@ function App() {
         '/create-game': CreateGame
     }
 
+    const navigationChangeHandler = (path) => {
+        console.log(path)
+    }
+
     return (
         <div id="box">
 
-            <Header />
+            <Header
+                navigationChangeHandler={navigationChangeHandler}
+            />
 
             <main id="main-content">
                 <WelcomeWorld />
