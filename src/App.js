@@ -1,17 +1,21 @@
+import { useState } from 'react';
+
 import Header from "./components/Header";
 import WelcomeWorld from "./components/WelcomeWorld";
 import CatalogPage from "./components/CatalogPage";
 import CreateGame from "./components/CreateGame";
 
 function App() {
+    const [page, setPage] = useState('/home');
+
     const routes = {
-        '/home': WelcomeWorld,
-        '/games': CatalogPage,
-        '/create-game': CreateGame
+        '/home': <WelcomeWorld />,
+        '/games': <CatalogPage />,
+        '/create-game': <CreateGame />
     }
 
     const navigationChangeHandler = (path) => {
-        console.log(path)
+        setPage(path)
     }
 
     return (
@@ -22,7 +26,7 @@ function App() {
             />
 
             <main id="main-content">
-                <WelcomeWorld />
+                {routes[page] || <h2>No Page Found!</h2>}
             </main>
 
         </div>
