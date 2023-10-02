@@ -1,24 +1,19 @@
 const Login = () => {
     return (
-        <section id="register-page" className="content auth">
-            <form id="register">
+        <section id="login-page" className="auth">
+            <form id="login">
+
                 <div className="container">
                     <div className="brand-logo"></div>
-                    <h1>Register</h1>
-
+                    <h1>Login</h1>
                     <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="maria@email.com" />
+                    <input type="email" id="email" name="email" placeholder="Sokka@gmail.com" />
 
-                    <label htmlFor="pass">Password:</label>
-                    <input type="password" name="password" id="register-password" />
-
-                    <label htmlFor="con-pass">Confirm Password:</label>
-                    <input type="password" name="confirm-password" id="confirm-password" />
-
-                    <input className="btn submit" type="submit" value="Register" />
-
+                    <label htmlFor="login-pass">Password:</label>
+                    <input type="password" id="login-password" name="password" />
+                    <input type="submit" className="btn submit" value="Login" />
                     <p className="field">
-                        <span>If you already have profile click <a href="#">here</a></span>
+                        <span>If you don't have profile click <a href="#">here</a></span>
                     </p>
                 </div>
             </form>
