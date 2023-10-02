@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Header from "./components/Header";
 import WelcomeWorld from "./components/WelcomeWorld";
-import CatalogPage from "./components/CatalogPage";
+import CataloguePage from "./components/GameCatalogue/CataloguePage";
 import CreateGame from "./components/CreateGame";
 import Login from "./components/Login";
 import Register from './components/Register';
@@ -13,7 +13,7 @@ function App() {
 
     const routes = {
         '/home': <WelcomeWorld />,
-        '/games': <CatalogPage />,
+        '/games': <CataloguePage />,
         '/create-game': <CreateGame />,
         '/login': <Login />,
         '/register': <Register />,
