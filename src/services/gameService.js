@@ -11,3 +11,7 @@ export async function getOne(id) {
     return await res.json()
 }
 
+export async function getLatest() {
+    const res = await fetch(`${baseUrl}/games?sortBy=_createdOn%20desc&distinct=category`)
+    return await res.json()
+}

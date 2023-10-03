@@ -7,7 +7,6 @@ const CataloguePage = ({
     navigationChangeHandler
 }) => {
     const [games, setGames] = useState([])
-    console.log(games)
     useEffect(() => {
         gameService.getAllGames()
             .then(gamesResult => {

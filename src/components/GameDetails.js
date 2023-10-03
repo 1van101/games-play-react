@@ -7,10 +7,13 @@ const GameDetails = ({
 }) => {
     const [game, setGame] = useState({});
 
-    useEffect(async () => {
-        let result = await gameService.getOne(id);
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await gameService.getOne(id);
+            setGame(result);
+        }
 
-        setGame(result);
+        fetchData();
     }, []);
 
     return (
