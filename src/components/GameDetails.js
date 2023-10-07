@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
+import { useParams } from 'react-router-dom';
 
 import * as gameService from '../services/gameService';
 
 const GameDetails = ({
-    id
 }) => {
+    const { gameId } = useParams();
     const [game, setGame] = useState({});
-
+    
     useEffect(() => {
         const fetchData = async () => {
-            const result = await gameService.getOne(id);
+
+            const result = await gameService.getOne(gameId);
             setGame(result);
         }
 
@@ -17,6 +19,7 @@ const GameDetails = ({
     }, []);
 
     return (
+        
         <section id="game-details">
             <h1>Game Details</h1>
             <div className="info-section">
@@ -64,3 +67,4 @@ const GameDetails = ({
 }
 
 export default GameDetails;
+
