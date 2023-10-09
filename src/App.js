@@ -12,12 +12,10 @@ import CataloguePage from "./components/GameCatalogue/CataloguePage";
 import CreateGame from "./components/CreateGame";
 import Login from "./components/Login";
 import Register from './components/Register';
-import ErrorPage from './components/ErrorPage';
+// import ErrorPage from './components/ErrorPage';
 import GameDetails from './components/GameDetails';
 
 function App() {
-    const [page, setPage] = useState('/home');
-
     return (
         <div id="box">
 
